@@ -1,9 +1,18 @@
-const hamburger = document.querySelectorAll("i.fa-bars")
-const close = document.querySelectorAll("a.close")
+const hamburger = document.querySelector("i.fa-bars");
+const close = document.querySelector("a.close");
+const menu = document.querySelector(".hamburger-menu");
 /* / variabili */
 
-hamburger.addEventListener("toggle", funzione);
+hamburger.addEventListener("click", aperturaMenu);
 
-function funzione() {
-    alert("hey");
-}
+    function aperturaMenu() {
+    menu.classList.add("active")
+    }
+
+close.addEventListener("click", chiusuraMenu);
+
+    function chiusuraMenu() {
+        menu.classList.remove("active")
+    }
+
+    
